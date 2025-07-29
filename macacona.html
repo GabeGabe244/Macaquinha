@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Feliz aniversário minha cuti cuti ❤️</title>
+<style>
+    body {
+        margin: 0; padding: 0;
+        background-color: #1a1a1a;
+        color: #ffb6c1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+    }
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 80px 20px 20px 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    #startButton {
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        background-color: #ff6ec7;
+        color: white;
+        cursor: pointer;
+        flex-shrink: 0;
+        height: fit-content;
+        align-self: center;
+        transition: background-color 0.3s;
+    }
+    #startButton:hover {
+        background-color: #ff85d1;
+    }
+    .text-content {
+        max-width: 600px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    h1 {
+        text-align: center;
+        font-size: 34px;
+        margin-top: 40px;
+        color: #ff6ec7;
+    }
+    .floating {
+        position: absolute;
+        font-size: 24px;
+        opacity: 0.8;
+        animation: floatHearts 10s linear infinite;
+        user-select: none;
+        pointer-events: none;
+        will-change: transform, opacity;
+    }
+    @keyframes floatHearts {
+        0% {
+            transform: translateY(100vh) translateX(0) scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(50vh) translateX(20px) scale(1.2);
+        }
+        100% {
+            transform: translateY(-10vh) translateX(-20px) scale(1.5);
+            opacity: 0;
+        }
+    }
+    /* Surpresa escondida, aparece ao rolar */
+    #surpresa {
+        margin-top: 100vh; /* fica abaixo da primeira tela */
+        padding: 40px 20px;
+        background-color: #2a2a2a;
+        color: #ffb6c1;
+        text-align: center;
+        position: relative;
+        min-height: 300px;
+        font-size: 24px;
+        border-top: 2px solid #ff6ec7;
+        overflow: hidden;
+    }
+    #surpresa h2 {
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    /* Responsividade para celular */
+    @media (max-width: 600px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 10px 20px 10px;
+            gap: 15px;
+        }
+        #startButton {
+            width: 80%;
+            font-size: 20px;
+            padding: 18px 0;
+            border-radius: 12px;
+        }
+        .text-content {
+            max-width: 100%;
+            font-size: 16px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+        #surpresa {
+            font-size: 20px;
+            padding: 30px 15px;
+        }
+        .floating {
+            font-size: 18px;
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Feliz aniversário minha cuti cuti ❤️</h1>
+    <div class="container">
+        <button id="startButton">Clique aqui para ouvir sua trilha sonora 🎵💖</button>
+        <div class="text-content">
+            Feliz aniversário meu amor! Infelizmente chegou o grande dia em que eu vou ter que parar de falar que vc ainda é a minha bebê por ter apenas 19 aninhos...e agora vc infelizmente foi para seus 20 aninhos...mas eu quero que vc saiba que independente da sua idade você sempre vai ser a minha bebê e você sempre será o amor da minha vida! Eu agradeço muito por ter encontrado você naquele jogo...realmente foi uma das melhores coisas que aquilo ja me proporcionou, não só por ter conhecido você, mas sim por ter me feito criar um sonho que eu realmente quero realizar apenas ao seu lado... Eu te amo demais e quero que você saiba que apesar de hoje ser o seu aniversário você ta de parabéns todos os dias, por ser essa garota maravilhosa, essa garota carinhosa, carismática, bobona com suas brincadeiras e pensamentos bobos... você realmente tem cada detalhe especial que eu simplesmente passaria horas falando cada detalhe e mania sua... eu amo prestar atenção em você, porque eu simplesmente amo ouvir você, 'sentir' você perto mesmo estando longe... eu sempre vou dizer que a gente foi algo 'improvável', por eu simplesmente jamais ter pensado em alguém assim tão perfeita igual você, no seu jeito, nessa cabecinha que você tem, você é algo que eu jamais conseguiria imaginar... esse sentimento é algo maravilhoso que você me dá... até hoje mesmo quando eu acordei e vi que tinha caído a ligação eu fiquei meio triste por não ter 'dormido contigo' igual a gente sempre faz KKKKKKK... eu realmente queria que você tivesse dentro da minha cabeça um dia, só pra você ver o quanto eu penso em você e que você pudesse sentir tudo o que eu sinto e realmente quero com você... eu te amo demais minha annynha, feliz aniversário meu amor!
+        </div>
+    </div>
+
+    <div id="surpresa">
+        <h2>💖 Datas que eu amo graças a você 💖</h2>
+        <p>18/06/2025</p>
+        <p>30/07</p>
+    </div>
+
+<script>
+    const itens = ["❤️", "💕", "💖", "💘", "💗", "minha annynha"];
+    const startButton = document.getElementById("startButton");
+
+    startButton.addEventListener("click", () => {
+        startButton.style.display = 'none';
+
+        for (let i = 0; i < 40; i++) {
+            let el = document.createElement("div");
+            el.className = "floating";
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.top = Math.random() * 100 + "vh";
+            el.style.animationDuration = (5 + Math.random() * 5) + "s";
+            el.textContent = itens[Math.floor(Math.random() * itens.length)];
+            document.body.appendChild(el);
+        }
+
+        const musica1 = new Audio('musica1.mp3');
+        const musica2 = new Audio('musica2.mp3');
+        musica1.volume = 1.0;
+        musica2.volume = 0.0;
+
+        // Função para fade out da primeira música
+        function fadeOut(audio, duration = 5000) {
+            const intervalTime = 100;
+            const step = intervalTime / duration;
+            return new Promise(resolve => {
+                const fade = setInterval(() => {
+                    if (audio.volume > 0) {
+                        audio.volume = Math.max(0, audio.volume - step);
+                    } else {
+                        clearInterval(fade);
+                        audio.pause();
+                        resolve();
+                    }
+                }, intervalTime);
+            });
+        }
+
+        // Função para fade in da segunda música
+        function fadeIn(audio, duration = 5000) {
+            const intervalTime = 100;
+            const step = intervalTime / duration;
+            audio.volume = 0;
+            audio.play();
+            return new Promise(resolve => {
+                const fade = setInterval(() => {
+                    if (audio.volume < 1) {
+                        audio.volume = Math.min(1, audio.volume + step);
+                    } else {
+                        clearInterval(fade);
+                        resolve();
+                    }
+                }, intervalTime);
+            });
+        }
+
+        musica1.play();
+
+        setTimeout(async () => {
+            await fadeOut(musica1, 5000);
+            await fadeIn(musica2, 5000);
+        }, 60000); // 60 segundos
+
+        // Adicionar corações também na seção surpresa
+        const surpresa = document.getElementById('surpresa');
+        for (let i = 0; i < 20; i++) {
+            let heart = document.createElement('div');
+            heart.className = 'floating';
+            heart.style.fontSize = '18px';
+            heart.style.left = Math.random() * 90 + 'vw';
+            heart.style.top = (window.innerHeight + Math.random() * 300) + 'px';
+            heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+            heart.textContent = '❤️';
+            surpresa.appendChild(heart);
+        }
+    });
+</script>
+
+</body>
+</html>
